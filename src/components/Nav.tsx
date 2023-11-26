@@ -3,6 +3,13 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { useMediaQuery } from '../util/useMediaQuery';
 
+interface Props {
+  imagePath: string;
+  altText: string;
+  name: string;
+  age: number;
+}
+
 const Nav = () => {
   const [toggled, setToggled] = useState(false);
   const matches = useMediaQuery('(min-width: 1280px)');
