@@ -1,13 +1,11 @@
-import { Image } from 'astro:assets';
+import avatar from '../assets/images/avatar.jpg';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useMediaQuery } from '../util/useMediaQuery';
 
 interface Props {
   imagePath: string;
   altText: string;
-  name: string;
-  age: number;
 }
 
 const Nav = () => {
@@ -32,7 +30,7 @@ const Nav = () => {
         />
       </svg>
       <div>
-        <img src={Image} alt="Profile picture Nika" />
+        <img src={avatar} alt="Profile picture Nika" />
       </div>
 
       <h1 className="text-lg font-bold">
@@ -43,7 +41,7 @@ const Nav = () => {
         <div className="fixed flex bg-gray-700 bottom-0 left-0 w-full h-screen items-center justify-center">
           <div className="flex flex-col gap-24">
             <a href="/">Projects</a>
-            <a href="/Education">Education & skills</a>
+            <a href="/education">Education & skills</a>
             <a href="/contact">Contact information</a>
           </div>
         </div>
