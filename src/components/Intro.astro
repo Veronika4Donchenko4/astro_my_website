@@ -1,68 +1,75 @@
 ---
-import main from "../assets/images/main-portrait.jpg";
+import { Image } from 'astro:assets';
+import main from '../assets/images/main-portrait.jpg';
+import paint from '../assets/images/paint.svg';
 import line from '../assets/images/fancy-line.svg';
 ---
 
-
-<div class = "relative mx-12 flex flex-col items-center justify-center">
-    <h1 class="text-xl">
-        Hi! I'm a frontend developer <span class="font-bold"> Welcome to my website! </span>
+<div class='relative mx-12 flex flex-col items-center justify-center'>
+    <h1 class='text-xl'>
+        Hi! I'm a frontend developer <span class='font-bold'>
+            Welcome to my website!
+        </span>
     </h1>
-        <div class="relative">
-            <svg class="absolute h-full w-full overflow-visible"
-                 width="540"
-                 height="255"
-                 viewBox="0 0 540 255" 
-                 fill="none" 
-                 xmlns="http://www.w3.org/2000/svg">
-                    <path d="M538 253.5V167H2L2 2" 
-                     stroke="url(#paint0_linear_6_33)" 
-                     stroke-width="3" stroke-linecap="round"/>
-                <defs>
-                <linearGradient 
-                 id="paint0_linear_6_33" 
-                 x1="2.00009" y1="50.9998"
-                 x2="589" 
-                 y2="275.5" 
-                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#0000FF"/>
-                <stop offset="1" stop-color="#ADD8E6"/>
+    <div class='relative'>
+        <svg
+            class='absolute h-full w-full overflow-visible'
+            width='540'
+            height='255'
+            viewBox='0 0 540 255'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+        >
+            <path
+                d='M538 253.5V167H2L2 2'
+                stroke='url(#paint0_linear_6_33)'
+                stroke-width='3'
+                stroke-linecap='round'></path>
+            <defs>
+                <linearGradient
+                    id='paint0_linear_6_33'
+                    x1='2.00009'
+                    y1='50.9998'
+                    x2='589'
+                    y2='275.5'
+                    gradientUnits='userSpaceOnUse'
+                >
+                    <stop stop-color='#0000FF'></stop>
+                    <stop offset='1' stop-color='#ADD8E6'></stop>
                 </linearGradient>
-                </defs>
-            </svg>
-            <p>Lorem ipsum dolor sit, amet consectetur
-             adipisicing elit. 
-             <br />
-             <br />
-             Magni maxime temporibus
-             minima voluptatibus modi in impedit laborum 
-             iste aliquid aspernatur natus fuga, omnis numquam,
-             ratione perferendis iusto.
-             <br />
-             <br />
-             Commodi, incidunt magni!
-            </p>
-        </div>
-        <div class="relative">
-            <img src={main} alt="Nika's portrait">
-            <div class ="absolute">
-                <img src='../assets/images/paint.svg' >
+            </defs>
+        </svg>
+        <p
+            >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            <br />
+            <br />
+            Magni maxime temporibus minima voluptatibus modi in impedit laborum
+            iste aliquid aspernatur natus fuga, omnis numquam, ratione
+            perferendis iusto.
+            <br />
+            <br />
+            Commodi, incidunt magni!
+        </p>
+    </div>
+    <div class='relative'>
+        <Image src={main} alt="Nika's portrait">
+            <div class='absolute'>
+                <Image src={paint} alt='' />
             </div>
-        </div>
+        </Image>
+
+        <div class='mt-12 h-4 w-full bg-zinc-200'></div>
+
+        <style>
+            #border-path {
+                animation: draw 1s forwards 1s ease-out;
+            }
+
+            @keyframes draw {
+                to {
+                    stroke-dashoffset: 0;
+                }
+            }
+        </style>
+    </div>
 </div>
-
-<div class="mt-12 h-4 w-full bg-zinc-200"></div>
-
-<style>
-    #border-path {
-      animation: draw 1s forwards 1s ease-out;
-    }
-  
-    @keyframes draw {
-      to {
-        stroke-dashoffset: 0;
-      }
-    }
-  </style>
- 
-
