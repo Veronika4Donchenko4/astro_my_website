@@ -29,11 +29,11 @@ const Nav = () => {
                 />
             </svg>
             <div>
-                <img src={avatar.src} alt='Profile picture Nika' />
+                <img src={avatar.src} alt='Profile picture Nika' className="rounded-[40%]" />
             </div>
 
             <h1 className='text-lg font-bold'>
-                <a href='/'>Nika</a>
+                <a href='/'>Nika's portfolio </a>
             </h1>
 
             {toggled && !matches && (
