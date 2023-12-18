@@ -2,7 +2,10 @@
 inProgress: false
 title: Project TicTacToe
 description: Project description
-img_alt: project image alt text
+image:
+    alt: project image alt text
+    url: '/src/assets/images/port.png'
+
 link: https://github.com/Veronika4Donchenko4/Tic-Tac-Toe
 tags: ['React', 'CSS', 'Typescript']
 ---
