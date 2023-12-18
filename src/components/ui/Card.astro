@@ -1,5 +1,5 @@
 ---
-import projectImage from '@assets/images/port.png';
+import projectImage from '@assets/images/quiz.png';
 import { Image } from '@astrojs/image/components';
 import Tags from '@components/ui/Tags.astro';
 interface Props {
@@ -8,6 +8,7 @@ interface Props {
 	title?: string;
 	description: string;
 	tags: string[];
+	imageSrc: string;
 	children?: HTMLElement | HTMLElement[];
 }
 

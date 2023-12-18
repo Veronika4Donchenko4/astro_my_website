@@ -15,12 +15,50 @@ import Button from '@components/ui/Button.astro';
 		}
 	}
 
+	@keyframes smokeAnimation {
+		0% {
+			opacity: 0.2;
+			transform: translateY(0) rotate(0deg);
+		}
+		25% {
+			opacity: 0.5;
+			transform: translateY(-5px) rotate(5deg);
+		}
+		50% {
+			opacity: 0.8;
+			transform: translateY(-10px) rotate(10deg);
+		}
+		75% {
+			opacity: 0.5;
+			transform: translateY(-5px) rotate(5deg);
+		}
+		100% {
+			opacity: 0.2;
+			transform: translateY(0) rotate(0deg);
+		}
+	}
+
 	.hero-section {
+		position: relative;
 		display: flex;
 		flex-direction: column-reverse;
 		align-items: center;
 		justify-content: center;
 		text-align: center;
+		overflow: hidden;
+	}
+
+	.hero-section::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(180deg, rgba(173, 216, 230, 0.2), rgba(173, 216, 230, 0.8));
+		z-index: -1;
+		animation: smokeAnimation 4s linear infinite;
+		filter: blur(20px);
 	}
 
 	.hero-text {
@@ -29,6 +67,7 @@ import Button from '@components/ui/Button.astro';
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
+		z-index: 1;
 	}
 
 	.hero-img {
