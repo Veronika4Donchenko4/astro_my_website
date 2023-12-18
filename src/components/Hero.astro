@@ -42,6 +42,23 @@ import Button from '@components/ui/Button.astro';
 	.hero-img img {
 		border-radius: 30%;
 	}
+
+	@media (min-width: 766px) {
+		.hero-section {
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.hero-text {
+			margin-right: 20px;
+		}
+
+		.hero-img {
+			margin-left: 20px;
+			margin-right: 0;
+		}
+	}
 </style>
 
 <section data-testid="hero" class="hero-section">
@@ -59,7 +76,7 @@ import Button from '@components/ui/Button.astro';
 	<div data-testid="hero-img" class="hero-img">
 		<Image
 			src={portImage}
-			alt="Coding girl"
+			alt="portrait"
 			aspectRatio="4:4"
 			format="png"
 			width={600}
