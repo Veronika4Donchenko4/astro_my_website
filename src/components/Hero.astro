@@ -4,23 +4,59 @@ import { Image } from '@astrojs/image/components';
 import Button from '@components/ui/Button.astro';
 ---
 
-<section
-	data-testid="hero"
-	class="flex h-screen flex-col-reverse items-center justify-center text-center lg:flex-row"
->
-	<div class="mb-10 flex flex-col items-center lg:mb-0 lg:w-1/2">
-		<div>
-			<h1 class="mb-10 font-monospace text-3xl text-black dark:text-white lg:text-5xl">
-				Hi! My name is <span class="text-blue font-semibold italic">Nika</span> and I am a frontend developer
-			</h1>
-		</div>
+<style>
+	@keyframes moveUpDown {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(10px);
+		}
+	}
+
+	.hero-section {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.hero-text {
+		margin-bottom: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	.hero-img {
+		margin-bottom: 10px;
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		animation: moveUpDown 4s linear infinite;
+	}
+
+	.hero-img img {
+		border-radius: 30%;
+	}
+</style>
+
+<section data-testid="hero" class="hero-section">
+	<div class="hero-text">
+		<h1 class="mb-10 font-monospace text-3xl text-black dark:text-white lg:text-5xl">
+			Hi! My name is <span class="font-semibold italic text-blue">Nika</span> and I am a frontend developer
+		</h1>
 		<div class="mb-10">
 			<a href="https://www.linkedin.com/in/veronika-donchenko-033a93266/" class="flex">
 				<Button style={'primary'} size={'lg'} name="learn more">Learn more</Button>
-			  </a>
+			</a>
 		</div>
 	</div>
-	<div data-testid="hero-img" class="mb-10 flex w-1/2 items-center justify-center">
+
+	<div data-testid="hero-img" class="hero-img">
 		<Image
 			src={portImage}
 			alt="Coding girl"
@@ -29,7 +65,6 @@ import Button from '@components/ui/Button.astro';
 			width={600}
 			height={600}
 			loading="eager"
-			style="border-radius: 30%;"
 		/>
 	</div>
 </section>
