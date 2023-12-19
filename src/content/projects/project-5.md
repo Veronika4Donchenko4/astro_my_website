@@ -1,8 +1,10 @@
 ---
-inProgress: true
+inProgress: false
 title: Project "hotel-customer" 
 description: Project description
-img_alt: project image alt text
+image:
+    alt: project image alt text
+    url: '/src/assets/images/hotel.png'
 link: https://github.com/Veronika4Donchenko4/hotel-customer
 tags: ['React', 'Redux', 'CSS', 'JS']
 ---
