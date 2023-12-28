@@ -32,5 +32,5 @@
 Inside of your Astro project, you'll see the following folders and files:
 
 ```
-
+<!-- more info about project -->
 ```
