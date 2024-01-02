@@ -35,3 +35,9 @@ Inside of your Astro project, you'll see the following folders and files:
 ```
 <!-- more info about project -->
 ```
+<!-- Notes to self -->
+<!-- Completed content
+Implemented feedback
+Responsive
+Functional menu
+All links should be working — Pointing to their correct destinations -->
