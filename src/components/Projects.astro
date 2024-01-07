@@ -5,7 +5,10 @@ import { getCollection } from 'astro:content';
 const projects = await getCollection('projects', ({ data }) => {
 	return !data.inProgress;
 });
+// figure out the value of this variable 
 ---
+
+
 
 <section
 	data-testid="projects"
