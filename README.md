@@ -35,9 +35,11 @@ Inside of your Astro project, you'll see the following folders and files:
 ```
 <!-- more info about project -->
 ```
-<!-- Notes to self -->
-<!-- Completed content
-Implemented feedback
-Responsive
-Functional menu
-All links should be working — Pointing to their correct destinations -->
+<!-- - Align fonts throughout the project
+- Fix display of projects, with transition to working links. 
+- Upload projects to hosting
+- Sort out the functionality of the projects
+- Add more information about skills
+- Remove comments from files
+- Add links to articles and lithcodes
+Responsive -->
