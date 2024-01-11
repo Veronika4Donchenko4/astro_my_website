@@ -41,5 +41,22 @@ Inside of your Astro project, you'll see the following folders and files:
 - Sort out the functionality of the projects
 - Add more information about skills
 - Remove comments from files
-- Add links to articles and lithcodes
+- Add links to articles and leetcode
 Responsive -->
+
+comments:
+			<!-- /* Improve Page speed */
+			/* https://css-tricks.com/almanac/properties/c/content-visibility/ */ -->
+
+            from card // project image display problem
+
+             <!-- add more icons with skill -->
+
+
+<!-- more about contact -->
+<!-- Add social media links  -->
+
+<!-- 
+		here will be skills with icones -->
+		<!-- 
+		here will be sertifikates -->
