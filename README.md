@@ -60,3 +60,4 @@ comments:
 		here will be skills with icones -->
 		<!-- 
 		here will be sertifikates -->
+          <!-- fix Nav anim  -->
