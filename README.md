@@ -61,3 +61,8 @@ comments:
 		<!-- 
 		here will be sertifikates -->
           <!-- fix Nav anim  -->
+
+<!-- 
+
+
+          A cry of the soul. I can't seem to get my act together and finish developing my website!!! -->
