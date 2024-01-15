@@ -50,19 +50,3 @@ comments:
 
             from card // project image display problem
 
-             <!-- add more icons with skill -->
-
-
-<!-- more about contact -->
-<!-- Add social media links  -->
-
-<!-- 
-		here will be skills with icones -->
-		<!-- 
-		here will be sertifikates -->
-          <!-- fix Nav anim  -->
-
-<!-- 
-
-
-          A cry of the soul. I can't seem to get my act together and finish developing my website!!! -->
