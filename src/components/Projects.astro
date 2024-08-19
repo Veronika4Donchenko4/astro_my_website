@@ -5,10 +5,7 @@ import { getCollection } from 'astro:content';
 const projects = await getCollection('projects', ({ data }) => {
 	return !data.inProgress;
 });
-// figure out the value of this variable 
 ---
-
-
 
 <section
 	data-testid="projects"
@@ -16,7 +13,7 @@ const projects = await getCollection('projects', ({ data }) => {
 	class="mb-10 flex flex-col items-center justify-center md:mb-0 md:h-screen"
 >
 	<h2 class="font-monospace text-2xl text-blue lg:text-4xl">Projects</h2>
-	<span class="mb-10 h-1 w-10 bg-orange"></span>
+	<span class="my-6 ml-2 h-1 w-20 bg-blue"></span>
 	<div class="mb-10 flex w-full flex-col flex-wrap items-center md:flex-row">
 		{
 			projects.map((project) => (
@@ -35,10 +32,10 @@ const projects = await getCollection('projects', ({ data }) => {
 		href="https://github.com/"
 		target="_blank"
 		rel="noopener"
-		class="flex flex-row text-black hover:text-orange dark:text-white dark:hover:text-orange"
+		class="hover:text-orange dark:hover:text-orange flex flex-row text-black dark:text-white"
 		aria-label="link to repository"
 	>
-	View all projects 
+		View all projects
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="none"

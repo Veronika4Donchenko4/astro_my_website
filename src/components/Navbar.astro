@@ -3,6 +3,8 @@ import Button from '@components/ui/Button.astro';
 import ToggleTheme from '@components/ui/ToggleTheme.astro';
 import { Astronav, MenuIcon, MenuItems } from 'astro-navbar';
 
+const { projectLink } = Astro.props;
+
 const menuitems = [
 	{
 		title: 'About',

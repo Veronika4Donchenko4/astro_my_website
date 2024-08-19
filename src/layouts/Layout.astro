@@ -5,18 +5,16 @@ import { SEO } from 'astro-seo';
 
 export interface LayoutProps {
 	title: string;
+	projectLink: string;
 }
 
-const { title = 'Web developer' } = Astro.props as LayoutProps;
+const { title = 'Web developer', projectLink } = Astro.props as LayoutProps;
 ---
 
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth" data-testid="html">
 	<head>
-		<SEO
-			title="A Very Descriptive Title"
-			description="A heavily optimized description full of well-researched keywords."
-		/>
+		<SEO title="Veronika Web" description="frontend developer site" />
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -28,7 +26,7 @@ const { title = 'Web developer' } = Astro.props as LayoutProps;
 	<body
 		class="mx-auto max-w-screen-xl bg-white px-5 font-sans text-white dark:bg-black xs:text-[16px] md:text-[18px]"
 	>
-		<Navbar />
+		<Navbar projectLink={projectLink} />
 		<slot />
 		<Footer />
 		<style is:global>

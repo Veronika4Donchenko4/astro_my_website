@@ -8,12 +8,19 @@ import Projects from '@components/Projects.astro';
 import BackToTop from '@components/ui/BackToTop.astro';
 import Layout from '@layouts/Layout.astro';
 import Skills from '@components/Skills.astro';
+
+const menuitems = [
+	{ title: 'About', path: '#about' },
+	{ title: 'Projects', path: '#projects' },
+	{ title: 'Contact', path: '#contact' },
+];
+
+const projectLink = menuitems.find((item) => item.title === 'Projects')?.path || '#projects';
 ---
 
-
-<Layout>
+<Layout projectLink={projectLink}>
 	<main>
-		<Hero />
+		<Hero projectLink={projectLink} />
 		<About />
 		<Education />
 		<Skills />

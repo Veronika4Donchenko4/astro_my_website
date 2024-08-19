@@ -1,5 +1,4 @@
 ---
-import projectImage from '@assets/images/quiz.png';
 import { Image } from '@astrojs/image/components';
 import Tags from '@components/ui/Tags.astro';
 
@@ -11,8 +10,6 @@ interface Props {
 	tags: string[];
 	src: string;
 }
-
-
 
 const {
 	url = '#',
@@ -32,7 +29,7 @@ const {
 		<a href={url} aria-label="link to project">
 			<div class="relative flex items-end overflow-hidden rounded-xl">
 				<Image
-					src={src}
+					src={`src/assets/${src}`}
 					alt={alt}
 					aspectRatio="4:4"
 					format="png"

@@ -1,10 +1,10 @@
 ---
 inProgress: false
-title: Project ToDo
-description: Project description
-link: https://github.com/Veronika4Donchenko4/-31github
-image: 
-    url: '/src/assets/images/hotel.png'
-    alt: project image alt text
-tags: ['React', 'CSS', 'Typescript']
+title: Project Psyconica
+description: Psychology platform
+link: https://psyconica.vercel.app
+image:
+  url: '/src/assets/hotel.png'
+  alt: project image alt text
+tags: ['React', 'Next', 'TailwindCSS', 'TS', 'Firebase']
 ---

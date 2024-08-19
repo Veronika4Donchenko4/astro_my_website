@@ -1,7 +1,9 @@
 ---
-import portImage from '@assets/images/port.png';
-import { Image } from '@astrojs/image/components';
+import portImage from '@assets/port.png';
 import Button from '@components/ui/Button.astro';
+
+const projectLink = Astro.props.projectLink;
+console.log(projectLink);
 ---
 
 <style>
@@ -58,11 +60,11 @@ import Button from '@components/ui/Button.astro';
 		background: linear-gradient(180deg, rgba(173, 216, 230, 0.2), rgba(173, 216, 230, 0.8));
 		z-index: -1;
 		animation: smokeAnimation 4s linear infinite;
-		filter: blur(20px);
+		filter: blur(60px);
 	}
 
 	.hero-text {
-		margin-bottom: 10px;
+		margin: 10px 0;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -103,24 +105,17 @@ import Button from '@components/ui/Button.astro';
 <section data-testid="hero" class="hero-section">
 	<div class="hero-text">
 		<h1 class="mb-10 font-monospace text-3xl text-black dark:text-white lg:text-5xl">
-			Hello! My name is <span class="font-semibold italic text-blue">Nika</span> and I am a frontend developer
+			Hello! My name is <span class="font-semibold italic text-blue">Nika</span> and I am a frontend
+			developer, below you can check out my projects.
 		</h1>
 		<div class="mb-10">
-			<a href="https://www.linkedin.com/in/veronika-donchenko-033a93266/" class="flex">
-				<Button style={'primary'} size={'lg'} name="learn more">Learn more</Button>
+			<a href={projectLink} class="flex">
+				<Button style={'primary'} size={'lg'} name="Learn more">Explore My Work</Button>
 			</a>
 		</div>
 	</div>
 
 	<div data-testid="hero-img" class="hero-img">
-		<Image
-			src={portImage}
-			alt="portrait"
-			aspectRatio="4:4"
-			format="png"
-			width={600}
-			height={600}
-			loading="eager"
-		/>
+		<img src={portImage.src} alt="portrait" width="600" height="600" />
 	</div>
 </section>

@@ -38,6 +38,13 @@ module.exports = {
 		letterSpacing: {
 			wide: '.025em',
 		},
+		extend: {
+			height: {
+			  '80vh': '80vh',
+			  '70vh': '70vh',
+			  '90vh': '90vh',
+			},
+		  },
 	},
 	plugins: [
 		plugin(function ({ addBase, theme }) {
