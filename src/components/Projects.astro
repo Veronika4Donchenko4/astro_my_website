@@ -2,9 +2,17 @@
 import Card from '@components/ui/Card.astro';
 import { getCollection } from 'astro:content';
 
-const projects = await getCollection('projects', ({ data }) => {
-	return !data.inProgress;
-});
+import portImage from '@assets/port.png';
+import psyImage from '@assets/psy.png';
+import gameImage from '@assets/game.png';
+import hotelImage from '@assets/hotels.png';
+import quizImage from '@assets/quizes.png';
+import projectImage from '@assets/project.png';
+import quoteImage from '@assets/talk.png';
+
+const images = [psyImage, hotelImage, quizImage, portImage, gameImage, quoteImage];
+
+const projects = await getCollection('projects', ({ data }) => !data.inProgress);
 ---
 
 <section
@@ -16,14 +24,14 @@ const projects = await getCollection('projects', ({ data }) => {
 	<span class="my-6 ml-2 h-1 w-20 bg-blue"></span>
 	<div class="mb-10 flex w-full flex-col flex-wrap items-center md:flex-row">
 		{
-			projects.map((project) => (
+			projects.map((project, index) => (
 				<Card
 					url={project.data.link}
 					title={project.data.title}
 					description={project.data.description}
 					alt={project.data.image.alt}
 					tags={project.data.tags}
-					src={project.data.image.url}
+					src={images[index].src}
 				/>
 			))
 		}

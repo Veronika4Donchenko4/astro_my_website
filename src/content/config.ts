@@ -10,7 +10,7 @@ const projectsCollection = defineCollection({
 		image: z.object({
 			url: z.string(),
 			alt: z.string(),
-		})
+		}),
 	}),
 });
 

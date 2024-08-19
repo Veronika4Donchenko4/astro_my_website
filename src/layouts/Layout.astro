@@ -20,12 +20,13 @@ const { title = 'Web developer', projectLink } = Astro.props as LayoutProps;
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
+		<link rel="stylesheet" href="styles.css" />
 		<title>{title}</title>
 	</head>
 	<body
 		class="mx-auto max-w-screen-xl bg-white px-5 font-sans text-white dark:bg-black xs:text-[16px] md:text-[18px]"
 	>
+		<div class="starfield"></div>
 		<Navbar projectLink={projectLink} />
 		<slot />
 		<Footer />
@@ -34,5 +35,6 @@ const { title = 'Web developer', projectLink } = Astro.props as LayoutProps;
 				content-visibility: auto;
 			}
 		</style>
+		<script src="/src/pages/stars.js"></script>
 	</body>
 </html>

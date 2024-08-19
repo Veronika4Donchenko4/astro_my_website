@@ -32,3 +32,46 @@
 	height: 100%;
 	background-color: rgba(0, 0, 255, 0.1);
 }
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+body::-webkit-scrollbar {
+	width: 0px;
+	background: transparent;
+}
+
+.starfield {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	z-index: -1;
+	pointer-events: none;
+}
+
+.star {
+	position: absolute;
+	background-color: rgb(69, 233, 255);
+	border-radius: 50%;
+	width: 2px;
+	height: 2px;
+	opacity: 0.8;
+	animation: fall linear infinite;
+}
+
+@keyframes fall {
+	from {
+		transform: translateY(-100vh);
+	}
+	to {
+		transform: translateY(100vh);
+	}
+}
